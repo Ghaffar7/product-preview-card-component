@@ -14,48 +14,106 @@
     --font-weight-700: 700;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background-color: var(--cream);
-    font-size: var(--font-size);
-    height: 100%;
+    font-family: var(--font-montserrat);
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+}
+
+.box-left {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.box-left img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.box-right {
+    background: var(--white);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 30px;
+}
+
+.box-right h6 {
+    letter-spacing: 0.3em;
+    color: var(--dark-grayish-blue);
+}
+
+.box-right h2 {
+    font-family: var(--font-fraunces);
+    font-weight: var(--font-weight-700);
+}
+
+.box-right p {
+    color: var(--dark-grayish-blue);
+}
+
+.box-right .content-a {
+    font-family: var(--font-fraunces);
+    font-weight: var(--font-weight-700);
+    font-size: 30px;
+    color: var(--dark-cyan);
+}
+
+.box-right .content-b {
+    text-decoration: line-through;
+}
+
+.box-right .content-c {
+    color: var(--white);
+    width: 200px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+    background-color: var(--dark-cyan);
+}
+
+.box-right .content-c:active {
+    background-color: darkgreen;
+}
+
+.box-right .content-c svg {
+    margin-right: 10px;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    height: 100vh;
 }
 
-.flex-item-left {
-    flex: 50%;
-    padding: 0;
-    margin: 0;
-    height: 50vh;
+@media screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 300px;
+        height: 400px;
+    }
+
+    .box-left {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: none;
+    }
+
+    .box-right {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
-
-.flex-item-right {
-    flex: 50%;
-    background-color: var(--white);
-    padding: 0;
-    margin: 0;
-    height: 50vh;
-}
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-}
-
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-
-
-
