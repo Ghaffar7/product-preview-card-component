@@ -39,7 +39,7 @@ p {
     color: hsl(228, 12%, 48%);
 }
 
-img {
+.img {
     background: url(./images/image-product-desktop.jpg);
     background-size: cover;
     height: 100%;
@@ -106,7 +106,7 @@ svg {
         height: 611px;
     }
 
-    img {
+    .img {
         background-image: url(./images/image-product-mobile.jpg);
         flex-basis: 100%;
         max-width: 100%;
